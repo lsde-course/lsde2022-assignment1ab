@@ -196,7 +196,7 @@ int main(int argc, char *argv[]) {
 	/* memory-map files created by loader */
 	person_map   = (Person *)         mmapr(makepath(argv[1], "person",   "bin"), &person_length);
 	interest_map = (unsigned short *) mmapr(makepath(argv[1], "interest", "bin"), &interest_length);
-	knows_map    = (unsigned int *)   mmapr(makepath(argv[1], "mutilated",    "bin"), &knows_length);
+	knows_map    = (unsigned int *)   mmapr(makepath(argv[1], "knows",    "bin"), &knows_length);
 
   	outfile = fopen(argv[3], "w");  
   	if (outfile == NULL) {
