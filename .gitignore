@@ -1,0 +1,6 @@
+loader
+cruncher
+reorg
+.DS_Store
+*.out
+*.dSYM/
