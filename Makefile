@@ -1,6 +1,9 @@
 # remove the # in the following line to enable reorg compilation (and running)
 all: cruncher # reorg
 
+mutilate: mutilate.c utils.h
+	gcc -I. -O3 -o mutilate mutilate.c
+
 cruncher: cruncher.c utils.h
 	gcc -I. -O3 -o cruncher cruncher.c 
 
