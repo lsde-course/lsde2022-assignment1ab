@@ -56,7 +56,6 @@ signed char get_score(unsigned int person, unsigned short artist, unsigned short
 		if (interest == artists[1]) score++;
 		if (interest == artists[2]) score++;
 		if (interest == artist) score = ARTIST_FAN;
-		if ((score&3) == 3) break; // early out
 	}
 	return score;
 }
