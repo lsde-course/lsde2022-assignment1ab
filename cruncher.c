@@ -52,10 +52,11 @@ signed char get_score(unsigned int person, unsigned short artist, unsigned short
 	     i++)
 	{
 		unsigned short interest = interest_map[i];
+		if (interest == artist) return ARTIST_FAN;
 		if (interest == artists[0]) score++;
 		if (interest == artists[1]) score++;
 		if (interest == artists[2]) score++;
-		if (interest == artist) score = ARTIST_FAN;
+		if (interest > artist && score >= 3) break; // early out
 	}
 	return score;
 }
